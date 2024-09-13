@@ -1,0 +1,12 @@
+l1=[1,2,3]
+l2=[11,12,13]
+l1.append(4)
+print(l1)
+l1.append(('5a','5b'))
+print(l1)
+l1.insert(5,'six')
+print(l1)
+l1.pop()
+print(l1)
+l1.reverse()
+print(l1)
