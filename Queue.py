@@ -1,6 +1,4 @@
 Queue=[]
-front=-1
-rear=-1
 while True:
     print("\nContent--->>")
     print("\n1.Enqueue")
@@ -10,25 +8,15 @@ while True:
     choice=int(input("Enter your choice(1-4): "))
     if(choice==1):
         a=int(input("\nEnter the element you want to insert: "))
-        if(front==-1 and rear==-1):
-            front=rear=0
-            Queue.append(a)
-        else:
-            rear=rear+1
-            Queue.append(a)
+        Queue.append(a)
     elif(choice==2):
-        if(front==-1 and rear==-1):
-            print("\nQueue Underflow...")
-        elif front == rear:
-            y = Queue.pop(front)
-            print("\nThe Poped item is: ", y)
-            front = rear = -1
+        if(len(Queue)==0):
+            print("underflow")
         else:
-            y=Queue.pop(front)
-            print("\nThe Poped item is:  ",y)
-            front=front+1
+            p=Queue.pop(0)
+            print("popped element =",p)
     elif(choice==3):
-        if(front==-1 and rear==-1):
+        if(len(Queue)==0):
             print("\nThe Queue is empty")
         else:
             print(Queue)
@@ -36,4 +24,4 @@ while True:
         print("\nExiting....")
         break
     else:
-        print("\nInvalid Choice,Please Eneter Correct choice")
+        print("\nInvalid Choice,Please Enter Correct choice")
